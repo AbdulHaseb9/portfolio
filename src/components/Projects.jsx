@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import projecthoobank from "../assets/images/projecthoobank.png";
 import projectgreenmind from "../assets/images/projectgreenmind.png";
 import projectdysseycosmoc from "../assets/images/projectdysseycosmoc.png";
+import projectloremipsum from "../assets/images/projectloremipsum.png";
 
 export const Projects = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  }, []);
   return (
     <div className="px-4 md:px-8 py-20 flex justify-center">
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-        <div className="h-72 shadow-2xl rounded-lg overflow-hidden">
+        <div
+          className="h-[320px] shadow-2xl rounded-lg overflow-hidden"
+          data-aos="fade-right"
+        >
           <img
             src={projecthoobank}
             alt="HooBank Project Picture"
@@ -16,7 +27,9 @@ export const Projects = () => {
           <h3 className="text-lg mt-2 ml-5 font-semibold hover:text-primaryblue transition-all duration-100">
             HooBank
           </h3>
-          <p className="text-sm ml-5 mb-2">Simple Landing Page</p>
+          <p className="text-sm ml-5 mb-2 mr-2">
+            UI clone using react vite js and tailwindcss
+          </p>
           <div className="flex">
             <div>
               <a
@@ -48,7 +61,10 @@ export const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="h-72 shadow-2xl rounded-lg overflow-hidden">
+        <div
+          className="h-[320px] shadow-2xl rounded-lg overflow-hidden"
+          data-aos="fade-up"
+        >
           <img
             src={projectgreenmind}
             alt="HooBank Project Picture"
@@ -57,7 +73,9 @@ export const Projects = () => {
           <h3 className="text-lg mt-2 ml-5 font-semibold hover:text-primaryblue transition-all duration-100">
             Green Mind
           </h3>
-          <p className="text-sm ml-5 mb-2">Simple Landing Page</p>
+          <p className="text-sm ml-5 mb-2 mr-2">
+            UI clone using react vite js and tailwindcss
+          </p>
           <div className="flex">
             <div>
               <a
@@ -89,7 +107,10 @@ export const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="h-72 shadow-2xl rounded-lg overflow-hidden">
+        <div
+          className="h-[320px] shadow-2xl rounded-lg overflow-hidden"
+          data-aos="fade-down"
+        >
           <img
             src={projectdysseycosmoc}
             alt="HooBank Project Picture"
@@ -98,7 +119,9 @@ export const Projects = () => {
           <h3 className="text-lg mt-2 ml-5 font-semibold hover:text-primaryblue transition-all duration-100">
             Dyssey - Cosmoc
           </h3>
-          <p className="text-sm ml-5 mb-2">Simple Landing Page</p>
+          <p className="text-sm ml-5 mb-2 mr-2">
+            UI clone using react vite js and tailwindcss
+          </p>
           <div className="flex">
             <div>
               <a
@@ -130,20 +153,26 @@ export const Projects = () => {
             </div>
           </div>
         </div>
-        <div className="h-72 shadow-2xl rounded-lg overflow-hidden">
+        <div
+          className="h-[320px] shadow-2xl rounded-lg overflow-hidden"
+          data-aos="fade-left"
+        >
           <img
-            src={projecthoobank}
+            src={projectloremipsum}
             alt="HooBank Project Picture"
             className="w-full h-48 object-cover object-top"
           />
           <h3 className="text-lg mt-2 ml-5 font-semibold hover:text-primaryblue transition-all duration-100">
             HooBank
           </h3>
-          <p className="text-sm ml-5 mb-2">Simple Landing Page</p>
+          <p className="text-sm ml-5 mb-2 mr-2">
+            UI clone using react vite js and tailwindcss
+          </p>
           <div className="flex">
             <div>
               <a
-                href="#"
+                href="https://logoipsumweb.netlify.app/"
+                target="_blank"
                 className="text-sm font-bold gap-2 flex items-center ml-5"
               >
                 Live Demo

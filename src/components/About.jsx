@@ -1,13 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import abouteclipse from "../assets/images/abouteclipse.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const About = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  }, []);
   return (
     <div className="bg-secondarylight px-4 md:px-8 py-20 md:flex md:items-center">
-      <div className="w-full md:w-1/2 flex justify-center">
+      <div
+        className="w-full md:w-1/2 flex justify-center"
+        data-aos="fade-right"
+      >
         <img src={abouteclipse} alt="Shapes" className="w-72" />
       </div>
-      <div className="w-full md:w-1/2 text-center md:text-left">
+      <div
+        className="w-full md:w-1/2 text-center md:text-left"
+        data-aos="fade-left"
+      >
         <h4 className="text-base font-semibold">About</h4>
         <h2 className="text-3xl font-bold my-3">About Me</h2>
         <p className="text-sm my-4">
